@@ -38,4 +38,29 @@ public class EmployeeDaoJpaImpl implements EmployeeDao{
 
 	}
 
+	@Override
+	public Employee findById(int theId) {
+		// TODO Auto-generated method stub
+		Employee theEmployee = entityManager.find(Employee.class, theId);
+		
+		return theEmployee;
+	}
+
+	@Override
+	public Employee save(Employee theEmployee) {
+		// TODO Auto-generated method stub
+		Employee dbEmployee = entityManager.merge(theEmployee);
+		
+		return dbEmployee;
+	}
+
+	@Override
+	public void deleteById(int theId) {
+		// TODO Auto-generated method stub
+		Employee theEmployee = entityManager.find(Employee.class, theId);
+		
+		entityManager.remove(theEmployee);
+		
+	}
+
 }

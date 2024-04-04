@@ -1,10 +1,11 @@
-package com.infinity.employeeCRUD.dao;
+package com.infinity.employeeCRUD.service;
 
 import java.util.List;
 
 import com.infinity.employeeCRUD.entity.Employee;
 
-public interface EmployeeDao {
+public interface EmployeeService {
+	
 	List<Employee> findAll();
 	
 	Employee findById(int theId);
