@@ -9,9 +9,10 @@ import com.sureway.sms.repository.StudentRepository;
 import com.sureway.sms.service.StudentService;
 
 
+
 @Service
 public class StudentServiceImpl implements StudentService{
-	
+
 	private StudentRepository studentRepository;
 	
 	public StudentServiceImpl(StudentRepository studentRepository) {
@@ -26,26 +27,22 @@ public class StudentServiceImpl implements StudentService{
 
 	@Override
 	public Student saveStudent(Student student) {
-		// TODO Auto-generated method stub
-		return null;
+		return studentRepository.save(student);
 	}
 
 	@Override
 	public Student getStudentById(Long id) {
-		// TODO Auto-generated method stub
-		return null;
+		return studentRepository.findById(id).get();
 	}
 
 	@Override
 	public Student updateStudent(Student student) {
-		// TODO Auto-generated method stub
-		return null;
+		return studentRepository.save(student);
 	}
 
 	@Override
 	public void deleteStudentById(Long id) {
-		// TODO Auto-generated method stub
-		
+		studentRepository.deleteById(id);	
 	}
 
 }
