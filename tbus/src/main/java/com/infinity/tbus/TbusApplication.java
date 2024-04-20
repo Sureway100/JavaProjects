@@ -1,4 +1,4 @@
-package com.tfare.tbus;
+package com.infinity.tbus;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

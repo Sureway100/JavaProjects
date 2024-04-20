@@ -1,0 +1,13 @@
+package com.infinity.tbus;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class TbusApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(TbusApplication.class, args);
+	}
+
+}
